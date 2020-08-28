@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Document</title>
+</head>
+<script>
+ // Definimos un array
+ var array = [1,2,3,4,5,6];
+ console.log(array);
+ //cambiamos el orden del array
+ array.reverse();
+ console.log(array);
+ // usamos .map para hacer alguna operacion matematica dentro del array; en
+ este caso multiplicamos cada elemento por si mismo
+ 
+ array = array.map(function(elemento){
+ elemento *= elemento;
+ return elemento
+ });
+ console.log(array);
+ // le sacamos la raiz cuadrada a cada elemento
+ array = array.map(Math.sqrt);
+ console.log(array);
+ // podemos usar.join para unir todos los elementos, lo que los convertiria
+en un string
+ array = array.join();
+ console.log(array);
+ // si especificamos algo en el parametro del join, cada elemento estará
+separado por ese parametro
+ //array = array.join("|");
+ console.log(array);
+ // en este caso usando split dividimos a ese string resultante
+ array = array.split(",");
+ console.log(array);
+ // agregamos un elemento a nuestro array al final
+ array.push("5");
+ console.log(array);
+ //Agregamos un elemento al principio del arreglo
+ array.unshift("0");
+ console.log(array);
+ // convertimos el array en una cadena
+ console.log(array.toString());
+ // quitamos el ultimo elemento
+ var eliminado = array.pop();
+ console.log(array);
+ // con un segundo parametro vemos que elemento fue eliminado
+ console.log(array, eliminado);
+ // con esta funcion quitamos los elementos del array que definamos segun
+su posicion
+ // primer parametro = posicion del elemento a quitar
+ // segundo parametro = alcance hasta donde debe eliminar a partir del
+primer parametro
+ // a partir del tercer parametro podemos agregar elementos en la posicion
+que hemos quitado
+ array.splice(1,3, "elemento nuevo");
+ console.log(array);
+ // corta el array, a partir del primer parametro y contando tantos
+elementos como el segundo; los demas los ignora
+ array = array.slice(0,2);
+ console.log(array);
+</script>
+<body> 
+</body>
+</html>
